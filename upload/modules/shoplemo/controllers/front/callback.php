@@ -59,7 +59,7 @@ class ShoplemoCallbackModuleFrontController extends ModuleFrontController
         }
         else
         {
-            die('Shoplemo: Invalid order state: ' . $order->getCurrentState . ' - Expected: ' . Configuration::get('SHOPLEMO_AWAITING_PAYMENT'));
+            die('Shoplemo: Invalid order state: ' . $order->getCurrentState() . ' - Expected: ' . Configuration::get('SHOPLEMO_AWAITING_PAYMENT'));
         }
 
         die('OK');
