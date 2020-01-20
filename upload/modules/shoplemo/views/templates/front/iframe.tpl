@@ -7,7 +7,7 @@
     <iframe src="{$shoplemo['url']}" id="shoplemoiframe" frameborder="0" scrolling="no" style="width: 100%;" width="900" height="400"></iframe>
     <script type="text/javascript">
         setTimeout(function(){ 
-            iFrameResize({ log: true },'#shoplemoiframe');
+            iFrameResize({},'#shoplemoiframe');
         }, 1000);
     </script>
   </section>
