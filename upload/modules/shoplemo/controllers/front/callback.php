@@ -48,7 +48,7 @@ class ShoplemoCallbackModuleFrontController extends ModuleFrontController
         $order = new Order($orderId);
         if ($order->getCurrentState() == Configuration::get('SHOPLEMO_AWAITING_PAYMENT'))
         {
-            if (Tools::getValue('status') == 'success')
+            if ($_data['payment']['payment_status'] == 'COMPLETED')
             {
                 $order->setCurrentState(2); // 2 :Payment Confirmed - 11: Remote payment accepted
             }
